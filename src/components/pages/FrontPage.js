@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Calculator from '../parts/Calculator';
+import Calculator from '../subcomponents/Calculator';
 
 const FrontPage = (props) => (
     <div className="frontPageCont">
