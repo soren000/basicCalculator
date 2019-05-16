@@ -47,7 +47,7 @@ ReactDOM.render(
 
 // console.log(eval("(5+2)*6+3"));
 
-const array = [7,4,2];
-const arrayNew = array;
-arrayNew.pop(arrayNew.length)
-console.log(array);
+// const array = [7,4,2];
+// const arrayNew = array;
+// arrayNew.pop(arrayNew.length)
+// console.log(array);
