@@ -6,8 +6,7 @@ import Calculator from '../subcomponents/Calculator';
 const FrontPage = (props) => (
     <div className="frontPageCont">
         <p>
-            <span>Basic Calculator made by <a href="https://soren.dev" target="_new">Soren</a></span>
-            <a href="https://github.com/soren000/basicCalculator"><span>GitHub</span></a>
+            <span>Basic Calculator</span>
         </p>
         <Calculator />
     </div>
