@@ -2,11 +2,27 @@ const defaultState = {
     lastInput: undefined,
     currentEntry: [],
     error: undefined,
-    lastResult: undefined
+    lastResult: undefined,
+    feedback: [],
+    get total() {
+        return "asd";
+    }
 }
 
 const calcReducer = (state = defaultState, action) => {
     switch (action.type) {
+        case 'SET_FEEDBACK':
+            
+            return {
+                ...state,
+                feedback: action.feedback
+            }
+        case 'SUBMIT_FEEDBACK':
+
+            return {
+                ...state,
+                feedback: state.feedback.concat({text: action.value})
+            }
         case 'CLEAR_ENTRY':
             let currentEntryNew = state.currentEntry;
             currentEntryNew = currentEntryNew.slice(0, currentEntryNew.length-1);

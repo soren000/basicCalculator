@@ -5,6 +5,7 @@ import { numberInput, operationInput, clearAll, clearEntry } from '../../redux/c
 
 class CalculatorNumberButton extends React.Component {
     inputDispatch = () => {
+        console.log(this.props.total);
         if (this.props.typeValue === "NUMBER") {
             this.props.dispatch(numberInput({ value: this.props.number }));
         }
@@ -30,4 +31,10 @@ class CalculatorNumberButton extends React.Component {
     }
 }
 
-export default connect()(CalculatorNumberButton);
+const mapStateToProps = (state) => {
+    return {
+        ...state.calc
+    }
+}
+
+export default connect(mapStateToProps)(CalculatorNumberButton);

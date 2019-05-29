@@ -7,6 +7,7 @@ import './styles/styles.scss';
 import AppRouter from './routers/AppRouter';
 
 import configureStore from './redux/configureStore';
+import { startSetFeedback } from './redux/calcActions';
 
 
 const store = configureStore();
@@ -19,9 +20,15 @@ const jsx = (
 )
 
 ReactDOM.render(
-    jsx,
+    <p>Loading...</p>,
     document.getElementById('app')
 );
+store.dispatch(startSetFeedback()).then(() => {
+    ReactDOM.render(
+        jsx,
+        document.getElementById('app')
+    );
+});
 
 // const array = [
 //     [7, 4, 2],
